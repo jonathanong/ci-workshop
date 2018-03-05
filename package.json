@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint --fix --cache .",
+    "stylelint": "stylelint --fix --cache 'client/**/*.css' 'client-storybook/**/*.css'",
+    "test": "npm run test-jsdom && npm run test-server",
+    "test-jsdom": "jest --coverage --config jest.jsdom.config.json",
+    "test-server": "jest --coverage --config jest.server.config.json"
   },
   "keywords": [],
   "author": "",
