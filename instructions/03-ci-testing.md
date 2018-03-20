@@ -1,7 +1,7 @@
 
 # Continuous Integration Testing
 
-Now, we setup continuous integration testing!
+Now, we setup a continuous integration pipeline and add our tests!
 With CI testing enabled, our tests will run on every push to GitHub.
 
 ## Workflow Improvements
@@ -20,9 +20,20 @@ destroy your battery. With CI testing, you just run tests for code you changed
 locally (ex. `npm run test-server -- 'server-lib/images/__tests__/*.js'`),
 push your changes to GitHub, then let your CI platform run the whole suite of tests.
 
-## CircleCI
+## Set Up CircleCI
 
-## Codecov
+[CircleCI](https://circleci.com/) is one of many CI providers.
+However, the reason I like CircleCI is for its [Workflows](https://circleci.com/docs/2.0/workflows/),
+which allow you to create sophisticated CI pipelines.
+At Dollar Shave Club, we use it to run multiple E2E tests in parallel and
+hundreds of monitors every minute.
+It's also Docker-based, allowing it to be blazing fast and supporting
+basically any use-case.
+
+## Set Up Codecov
+
+[Codecov](https://codecov.io/) is a SaaS for creating dashboards
+of code coverage and blocking checks as necessary.
 
 ## TODO
 
@@ -32,4 +43,5 @@ push your changes to GitHub, then let your CI platform run the whole suite of te
   - Run server tests, then report code coverage to `codecov`
   - Run react tests, then report code coverage to `codecov`
 
-Note: every time you run `jest`, a `coverage/` directory is created with coverage.
+Every time you run `jest`, a `coverage/` directory is created with coverage,
+so after sending results to codecov, delete the `coverage/` folder.

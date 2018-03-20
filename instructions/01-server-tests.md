@@ -3,6 +3,8 @@
 
 The first tests we'll write are server tests.
 Server tests are generally easier to write (compared to browser or Selenium tests) as the environment is controlled.
+You could guarantee almost the same environment between development and production
+if you used Docker, but we should be okay with just specifying the version of node.
 
 ## Example Server
 
@@ -30,7 +32,7 @@ server-api      server-routes
 By modularizing the server from the beginning, we are able to:
 
 - Define a clear separation of concerns
-- Allow us to easily find code
+- Allow us to easily find code based on routes
 - Ability to run tests for a specific concern
 - Separate any of these folders, specifically `server-lib`, to a separate module if it will be re-used elsewhere, i.e. in other microservices
 - Improving overall test speed by running tests in only their concern
@@ -41,6 +43,8 @@ a few files, so we want to run tests at the lowest abstraction level possible
 
 ## Jest
 
+https://github.com/facebook/jest
+
 Throughout this workshop, we'll be using `jest` as our test runner.
 This is the de factor runner for React apps as it includes all the packages
 you may need to run tests. It also works very well for server tests
@@ -48,7 +52,10 @@ as it automatically runs all your tests in parallel.
 
 ## Supertest
 
-`supertest` is a useful server testing library based on `superagent`.
+https://github.com/visionmedia/supertest
+
+`supertest` is a useful server testing library based on [`superagent`](https://github.com/visionmedia/superagent),
+allowing you to quickly write API tests.
 
 ## Test Structure
 
@@ -71,7 +78,7 @@ server-lib/images/
 The reasons to do this are:
 
 - Your tests will have a clear separation of concern
-- Easier to delete code
+- It's easier to delete code – if you don't need image logic anymore, just delete the entire `server-lib/images/` folder
 - Running tests for a specific concern will be a lot easier (see below)
 
 To just run `server-lib/images/` tests, run the following command:
@@ -88,13 +95,15 @@ of the shell, which differs between environments.
 
 What if tests are concerned with more than just images?
 Then you move the `__tests__` folder up to the closest ancestor of the concerns.
+In this case it'll probably be `server-lib/__tests__`, which would then basically
+be a folder of integration tests of `server-lib/*` modules.
 
-## Node.js Tests
+## Implement Unit Tests
 
 Write a test that checks the metadata of an image.
 
 Write a test that, given an image URL, streams it and resizes it.
 
-## API Tests
+## Implement API/Route Tests
 
 Write a test that

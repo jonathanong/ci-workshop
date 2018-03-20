@@ -3,11 +3,15 @@
 
 ## What is Continuous Integration/Delivery?
 
-- Small commits, often
-- Deploy to as much as possible
-- Automated tests throughout the pipeline
-- Automated rollbacks
-- Monitoring at every stage
+- Deliver small commits often.
+  - No gigantic PRs, no gigantic merge conflicts
+  - Dark launch code behind a feature flag so you can ship features without enabling it for all users
+- An automated delivery pipeline
+  - Automatically going to the next step after tests pass
+  - Automatically triggering jobs when a specific event occurs
+- Monitoring in production and elsewhere in your stack to create a feedback loop
+
+There is a lot of resources online about this.
 
 ## Why Continuous Integration/Delivery?
 
