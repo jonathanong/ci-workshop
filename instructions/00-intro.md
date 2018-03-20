@@ -20,6 +20,14 @@ There is a lot of resources online about this.
 - Minimize downtime
 - Pinpoint regressions
 
+## What This Workshop Covers
+
+The workshop covers a wide breadth of knowledge in terms of CI/CD.
+It does not not dive deep into the specifics of various aspects of CI/CD,
+nor does it dive deep into theories and strategies. Those could be their own workshops.
+The goal is for you to gain enough experience in different parts of the CI/CD pipeline
+so that you want to learn more.
+
 ## Setup
 
 Install `node@8.9` or later:
