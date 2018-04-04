@@ -22,6 +22,7 @@ but not go into depth on any one aspect.
 1. [Linting](01-linting.md)
 2. [Continuous Integration](02-continuous-integration.md)
 3. [Storybook](03-storybook.md)
+4. [Code Coverage](04-code-coverage.md)
 4. [Server Tests](04-server-tests.md)
 5. [React Tests](05-react-tests.md)
 6. [Continuous Delivery](06-continuous-delivery.md)
@@ -145,6 +146,7 @@ Testing:
 SaaS:
 
 - [CircleCI](https://circleci.com/)
+- [Codecov](https://codecov.io/)
 - [Heroku](https://www.heroku.com/)
 - [Rollbar](https://rollbar.com)
 - [Greenkeeper](https://greenkeeper.io/)
@@ -172,3 +174,7 @@ brew install selenium-server-standalone chromedriver
 ```
 
 Install Heroku's CLI: https://devcenter.heroku.com/articles/heroku-cli
+
+## Implicit Steps
+
+- We expect you to commit small and often. We won't tell you to `git commit` and `git push`.
