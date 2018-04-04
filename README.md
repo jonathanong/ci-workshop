@@ -1,12 +1,6 @@
 
 # CI Workshop
 
-Contact me:
-
-- GitHub: [@jonathanong](https://github.com/jonathanong)
-- Twitter: [@jongleberry](https://twitter.com/jongleberry)
-- Email: [me@jongleberry.com](mailto:me@jongleberry.com)
-
 This workshop guides you through setting continuous integration and delivery in a sample React and Node application. You will learn:
 
 - How to setup CI/CD with Heroku Pipelines
@@ -19,6 +13,25 @@ This workshop guides you through setting continuous integration and delivery in 
 
 The goal is to dip your hands in enough aspects of CI/CD,
 but not go into depth on any one aspect.
+
+## Lessons
+
+Here are the lessons.
+
+1. [Linting](01-linting.md)
+2. [Server Tests](02-server-tests.md)
+3. [React Tests](03-react-tests.md)
+4. [CI Testing](04-ci-testing.md)
+
+Please read the background below before starting on the lessons.
+
+## Contact
+
+Contact me:
+
+- GitHub: [@jonathanong](https://github.com/jonathanong)
+- Twitter: [@jongleberry](https://twitter.com/jongleberry)
+- Email: [me@jongleberry.com](mailto:me@jongleberry.com)
 
 ## What is Continuous Integration/Delivery?
 
@@ -97,6 +110,34 @@ The main tenets of the testing trophy is:
 - Focus on tests that fulfill actual acceptance criteria.
   - Unit tests are tests for engineers. End-to-End tests are tests for stakeholders. It's more important to write tests for stakeholders as that's how your work is measured.
 
+## Tools
+
+Backend:
+
+- [Koa](http://koajs.com/)
+
+Frontend:
+
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [Storybook](https://storybook.js.org/)
+
+Testing:
+
+- [Jest](https://facebook.github.io/jest/) - for both frontend and backend tests
+- [supertest](https://github.com/visionmedia/supertest) - for testing APIs
+- [Puppeteer](https://github.com/GoogleChrome/puppeteer) - for monitors and automation tests
+- [Selenium](https://www.seleniumhq.org/) - for automation tests
+- [@dollarshaveclub/e2e](https://github.com/dollarshaveclub/e2e) - an end-to-end test runner for Puppeteer and Selenium
+- [@dollarshaveclub/monitor](https://github.com/dollarshaveclub/monitor) - a monitoring framework
+
+CI:
+
+- [CircleCI](https://circleci.com/)
+
+Deployment:
+
+- [Heroku](https://www.heroku.com/)
 
 ## Setup
 
