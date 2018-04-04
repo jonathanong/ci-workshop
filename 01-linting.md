@@ -72,6 +72,7 @@ Let's update our commands to:
 
 Now, when we run `npm run eslint` or `npm run stylelint`,
 we'll only see errors concerning our own code.
+
 However, notice that when we run `npm run eslint`, we get errors
 in our tests files that look like `"xtest" is not defined.`.
 This is because `jest` adds globals to the runtime to make tests authoring easier.

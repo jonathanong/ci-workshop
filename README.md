@@ -119,6 +119,7 @@ The main tenets of the testing trophy is:
   - Avoid mocking and spying on functions as it takes a lot of effort to write those tests
 - Focus on tests that fulfill actual acceptance criteria.
   - Unit tests are tests for engineers. End-to-End tests are tests for stakeholders. It's more important to write tests for stakeholders as that's how your work is measured.
+- If your tests become too slow, parallelize and shard your tests!
 
 ## Tools
 
