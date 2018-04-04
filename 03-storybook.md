@@ -110,8 +110,62 @@ npm run test:jsdom -- 'client/stories/__tests__/*.js'
 ## Implement storybook-deployer
 
 [@storybook/storybook-deployer](https://github.com/storybooks/storybook-deployer)
+is a simple CLI tool to deploy your Storybook to `gh-pages` so that it's viewable publicly. Here's an example [http://airbnb.io/react-dates/](http://airbnb.io/react-dates/).
+Let's install it:
+
+```bash
+npm install --save-dev @storybook/storybook-deployer
+```
+
+We only want to push `master`'s version of storybook to `gh-pages` - we don't want each pull
+request pushing its version of storybook to `gh-pages` as it could be a broken version.
+To only run it on master, we're going to use [CircleCI 2 Workflows](https://circleci.com/docs/2.0/workflows/).
+
+Let's rename our current `build` job to `test`.
+Then create a new job called `publish-storybook`,
+but without any steps after `restore_cache`.
+
+```yaml
+version: 2
+jobs:
+  test:
+    # ...intentional omission...
+  publish-storybook:
+    # ...intentional omission...
+```
+
+After restoring cache, `publish-storybook` should just publish the storybook:
+
+```yaml
+- checkout
+- restore_cache:
+    keys: # ...intentional omission...
+- run: npx storybook-to-ghpages
+```
+
+Next, we want to make sure this only runs in production.
+We want to publish the storybook after `test` passes and only on master,
+so let's create a workflow (append to the bottom of the config file):
+
+```yaml
+workflows:
+  version: 2
+  commit: # this workflow runs on every commit
+    jobs:
+      - test
+      - publish-storybook:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master
+```
+
+Push and let's see what happens!
 
 ## Advanced
 
+- Notice that tests are ran when the storybook is pushed to `gh-pages`, but there are no tests! How can we avoid that from happening?
 - Look into implementing addons: https://storybook.js.org/addons/addon-gallery/
 - Look into continuous visual regression testing: https://percy.io/
