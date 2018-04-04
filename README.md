@@ -19,8 +19,6 @@ but not go into depth on any one aspect.
 
 ## Lessons
 
-Here are the lessons.
-
 1. [Linting](01-linting.md)
 2. [Continuous Integration](02-continuous-integration.md)
 3. [Storybook](03-storybook.md)
