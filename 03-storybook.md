@@ -87,7 +87,7 @@ And, let's add it to our CircleCI config:
 - run: npm run test:jsdom
 ```
 
-## Passing Options
+### Passing Options
 
 To get code coverage:
 
