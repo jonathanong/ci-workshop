@@ -19,7 +19,7 @@ However, for development, we just want to run `npm run storybook`.
 
 ## Implement Storyshots
 
-Following the 80/20 principle, [Jest snapshots](https://facebook.github.io/jest/docs/en/snapshot-testing.html)
+Following the [80/20 rule](https://en.wikipedia.org/wiki/Pareto_principle), [Jest snapshots](https://facebook.github.io/jest/docs/en/snapshot-testing.html)
 are an easy way to get coverage on your React components without much effort.
 [@storybook/addon-storyshots](https://github.com/storybooks/storybook/tree/master/addons/storyshots)
 turns your Storybook stories into snapshot tests, killing two birds with one stone.
