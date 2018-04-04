@@ -8,8 +8,11 @@ This workshop guides you through setting continuous integration and delivery in 
   - Unit tests with Jest
   - Automation tests with Puppeteer and Selenium
 - How to setup production monitoring
-  - Custom uptime/downtime monitoring
+  - Custom uptime/downtime monitoring with Slack notifications
   - Error monitoring with Rollbar
+- How to keep your dependencies up to date
+  - Automatic testing dependency upgrades with Greenkeeper
+  - Checking for security issues with Node Security
 
 The goal is to dip your hands in enough aspects of CI/CD,
 but not go into depth on any one aspect.
@@ -19,9 +22,17 @@ but not go into depth on any one aspect.
 Here are the lessons.
 
 1. [Linting](01-linting.md)
-2. [Server Tests](02-server-tests.md)
-3. [React Tests](03-react-tests.md)
-4. [CI Testing](04-ci-testing.md)
+2. [Continuous Integration](02-continuous-integration.md)
+3. [Storybook](03-storybook.md)
+4. [Server Tests](04-server-tests.md)
+5. [React Tests](05-react-tests.md)
+6. [Continuous Delivery](06-continuous-delivery.md)
+7. [Monitoring and Notifications](07-monitors-and-notifications.md)
+8. [End-to-End Tests](08-end-to-end-tests.md)
+9. [Error Monitoring](09-error-monitoring.md)
+10. [Dependency Upgrades and Security Checks](10-dependency-upgrades-and-security-checks.md)
+11. [Dark Launching with Feature Flags](11-dark-launching-with-feature-flags.md)
+12. [Learn More](12-learn-more.md)
 
 Please read the background below before starting on the lessons.
 
@@ -91,7 +102,7 @@ Here's one breakdown (actual definitions do not matter in real life):
   - Server examples:
     - Test that a function works correctly
     - Test that a single API call returns a valid response
-- Integration Testing - validate that your components work correctly together.
+- Integration Testing - validate that your components work correctly together
   - React examples:
     - Snapshot tests w/ different props
     - Testing the entire redux store
@@ -124,6 +135,8 @@ Frontend:
 
 Testing:
 
+- [eslint](https://eslint.org/)
+- [stylelint](https://github.com/stylelint/stylelint)
 - [Jest](https://facebook.github.io/jest/) - for both frontend and backend tests
 - [supertest](https://github.com/visionmedia/supertest) - for testing APIs
 - [Puppeteer](https://github.com/GoogleChrome/puppeteer) - for monitors and automation tests
@@ -131,21 +144,26 @@ Testing:
 - [@dollarshaveclub/e2e](https://github.com/dollarshaveclub/e2e) - an end-to-end test runner for Puppeteer and Selenium
 - [@dollarshaveclub/monitor](https://github.com/dollarshaveclub/monitor) - a monitoring framework
 
-CI:
+SaaS:
 
 - [CircleCI](https://circleci.com/)
-
-Deployment:
-
 - [Heroku](https://www.heroku.com/)
+- [Rollbar](https://rollbar.com)
+- [Greenkeeper](https://greenkeeper.io/)
+- [Node Security](https://nodesecurity.io/)
+- [Slack](https://slack.com/)
 
 ## Setup
 
 Install `node@8.9` or later:
 
 ```bash
+# If you install via homebrew:
 brew install node
 # brew upgrade node
+
+# If you install via nvm:
+nvm install 8
 ```
 
 Install (or `upgrade`) Selenium and friends:
