@@ -39,3 +39,15 @@ Read more here: [https://devcenter.heroku.com/articles/github-integration-review
 ![](./images/heroku/07-enable-review-apps-form.png)
 
 Now, let's push a commit to master and see what happens!
+
+## Advanced
+
+Heroku has a lot of adds that are quite useful.
+Perhaps what you might need to debug your app is logging.
+If you install the [Heroku Toolbelt](https://devcenter.heroku.com/articles/heroku-cli),
+you can view logs by running `heroku logs -a <your-app>` after logging in.
+However, a service like [papertrail](https://papertrailapp.com/) might help you a lot.
+
+However, I personally avoid logs. Logging in node.js actually causes significant
+performance degradation – you should avoid it as much as possible.
+We'll cover error monitoring in a future topic.
