@@ -30,8 +30,9 @@ but not go into depth on any one aspect.
 9. [End-to-End Tests](09-end-to-end-tests.md)
 10. [Error Monitoring](10-error-monitoring.md)
 11. [Dependency Upgrades and Security Checks](11-dependency-upgrades-and-security-checks.md)
-12. [Dark Launching with Feature Flags](12-dark-launching-with-feature-flags.md)
-13. [Learn More](13-learn-more.md)
+12. [GitHub Status Checks](12-github-status-checks.md)
+13. [Dark Launching with Feature Flags](13-dark-launching-with-feature-flags.md)
+14. [Learn More](14-learn-more.md)
 
 Please read the background below before starting on the lessons.
 
