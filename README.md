@@ -16,6 +16,8 @@ This workshop guides you through setting continuous integration and delivery in 
 
 The goal is to dip your hands in enough aspects of CI/CD,
 but not go into depth on any one aspect.
+This workshop consists mostly of reading and copying and pasting,
+just like real web development ;)
 
 ## Lessons
 
