@@ -27,7 +27,7 @@ but not go into depth on any one aspect.
 6. [Server Tests](06-server-tests.md)
 7. [Continuous Delivery](07-continuous-delivery.md)
 8. [Monitoring and Notifications](08-monitors-and-notifications.md)
-9. [End-to-End Tests](09-end-to-end-tests.md)
+9. [End-to-End Tests](09-automation-tests.md)
 10. [Error Monitoring](10-error-monitoring.md)
 11. [Dependency Upgrades and Security Checks](11-dependency-upgrades-and-security-checks.md)
 12. [GitHub Status Checks](12-github-status-checks.md)
