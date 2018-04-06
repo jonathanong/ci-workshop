@@ -122,8 +122,7 @@ request pushing its version of storybook to `gh-pages` as it could be a broken v
 To only run it on master, we're going to use [CircleCI 2 Workflows](https://circleci.com/docs/2.0/workflows/).
 
 Let's rename our current `build` job to `test`.
-Then create a new job called `publish-storybook`,
-but without any steps after `restore_cache`.
+Then create a new job called `publish-storybook`.
 
 ```yaml
 version: 2
@@ -138,8 +137,7 @@ After restoring cache, `publish-storybook` should just publish the storybook:
 
 ```yaml
 - checkout
-- restore_cache:
-    keys: # ...intentional omission...
+- run: npm install
 - run: npx storybook-to-ghpages
 ```
 

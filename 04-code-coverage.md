@@ -23,7 +23,12 @@ After we run `npm run test:jsdom -- --coverage`,
 we just need to run the `codecov` executable afterwards.
 
 To do so, install it: `npm install --save-dev codecov`,
-then add `npx codecov` after your test command.
+then add `npx codecov` after your test command:
+
+```yaml
+- run: npx codecov
+```
+
 After your first run, you should be able to go to your repository's
 Codecov page and see the coverage.
 To go directly, go to [https://codecov.io/gh/<github-handle>/<repo-name>](https://codecov.io/gh/<github-handle>/<repo-name>).

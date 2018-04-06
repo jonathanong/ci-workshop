@@ -17,25 +17,14 @@ jobs:
       - image: circleci/node:8
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-{{ .Branch }}
-            - code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-master
-            - code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}
       - run: npm install
-      - save_cache:
-          key: code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-{{ .Branch }}
-          paths:
-            - node_modules
 ```
 
 This CircleCI build does the following:
 
 1. Spin up a job using CircleCI's node docker container
 1. Check out the git code
-1. Try to restore cache from a bunch of different cache key prefixes
 1. `npm install`
-1. Save the `node_modules` folder to the cache with a cache key
 
 Read more about caching here: https://circleci.com/docs/2.0/caching/
 
@@ -64,3 +53,12 @@ Next, let's setup the CircleCI Badge on your readme:
 1. Go to "Status Badges" on the left
 1. Select the "master" branch
 1. Copy and paste the Markdown embed code into your readme!
+
+## Advanced
+
+There is an art to setting up CircleCI Workflows for your app.
+At Dollar Shave Club, we run about 24 jobs for just one repository!
+In this workshop, your CircleCI jobs will be slow because we haven't setup caching,
+which could be its own lesson.
+
+For a more complex CircleCI config file, checkout [IMS's](https://github.com/jonathanong/ims/blob/master/.circleci/config.yml).

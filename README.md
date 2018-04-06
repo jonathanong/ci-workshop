@@ -3,7 +3,7 @@
 
 This workshop guides you through setting continuous integration and delivery in a sample React and Node application. You will learn:
 
-- How to setup CI/CD with Heroku Pipelines
+- How to setup CI/CD with Heroku Pipelines and Review Apps
 - How to write and setup unit and automation tests
   - Unit tests with Jest
   - Automation tests with Puppeteer and Selenium
@@ -44,7 +44,15 @@ Contact me:
 
 - GitHub: [@jonathanong](https://github.com/jonathanong)
 - Twitter: [@jongleberry](https://twitter.com/jongleberry)
+- LinkedIn: [@jongleberry](https://www.linkedin.com/in/jongleberry/)
 - Email: [me@jongleberry.com](mailto:me@jongleberry.com)
+
+## Reference App
+
+The reference app you will be working on and deploying is here: https://github.com/jonathanong/ci-reference-app.
+This app is based on my personal reference app [IMS](https://github.com/jonathanong/ims),
+so feel free to explore it.
+If you wish to cheat, there are solutions in the [solution](https://github.com/jonathanong/ci-reference-app/tree/solution) branch.
 
 ## What is Continuous Integration/Delivery?
 
@@ -59,7 +67,7 @@ See this post and company for more details:
 
 [![](http://blog.launchdarkly.com/wp-content/uploads/2016/06/software_dev_graph.jpg)](http://blog.launchdarkly.com/powering-continuous-delivery-with-feature-flags/)
 
-What is CI/CD in a few bullet points?
+What is the CI/CD workflow in a few bullet points?
 
 - Deliver small commits often.
   - No gigantic PRs, no gigantic merge conflicts

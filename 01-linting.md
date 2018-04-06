@@ -37,7 +37,7 @@ then let's add configuration files for each at the root of the repository.
 extends:
   - standard
   - standard-react
-parser: babel-eslint # necessary for some futuristic syntad
+parser: babel-eslint # necessary for some futuristic syntax
 ```
 
 [`.stylelintrc`](https://stylelint.io/user-guide/configuration/):
@@ -74,7 +74,7 @@ Now, when we run `npm run eslint` or `npm run stylelint`,
 we'll only see errors concerning our own code.
 
 However, notice that when we run `npm run eslint`, we get errors
-in our tests files that look like `"xtest" is not defined.`.
+in our tests files that look like `'test' is not defined`.
 This is because `jest` adds globals to the runtime to make tests authoring easier.
 We want `eslint` to understand that these files are tests.
 There are multiple ways to enable this:
@@ -98,7 +98,7 @@ Instead of manually fixing these errors, just run `npm run eslint -- --fix`.
 
 ## Advanced
 
-Here are my final commands for linting.
+Here are my [final commands for linting](https://github.com/jonathanong/ims/blob/3afd07310577e17fe64d1e988eacc5d32ff5917e/package.json#L8-L9).
 Run `npx eslint -h` and `npx stylelint -h` for more information:
 
 ```

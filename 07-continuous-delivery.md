@@ -4,6 +4,43 @@
 Next, let's actually deploy our application!
 I'm going to assume you have a Heroku account!
 
+## Files
+
+First, we'll need to add a few files.
+The first file is a [`Procfile`](https://devcenter.heroku.com/articles/procfile), which tells Heroku how to run your app:
+
+```
+web: node server
+```
+
+The second is an [`app.json`](https://devcenter.heroku.com/articles/app-json-schema), which tells Heroku how to build your review apps:
+
+```json
+{
+  "name": "ci-reference-app",
+  "env": {
+    "NODE_ENV": {
+      "value": "staging",
+      "required": true
+    },
+    "HEROKU_REVIEW_APP": {
+      "value": "1",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ]
+}
+```
+
+## Setting It UP
+
 Let's create a new pipeline. Call it whatever you want:
 
 ![](./images/heroku/01-create-new-pipeline.png)
@@ -39,6 +76,7 @@ Read more here: [https://devcenter.heroku.com/articles/github-integration-review
 ![](./images/heroku/07-enable-review-apps-form.png)
 
 Now, let's push a commit to master and see what happens!
+Let's also make a new PR and see what happens?
 
 ## Advanced
 
