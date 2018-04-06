@@ -36,6 +36,7 @@ Then, add a `throw new Error('boom')` to one of the routes and hit it.
 We've also setup the Rollbar implementation for the Frontend for you.
 Add the client post item access token here: https://github.com/jonathanong/ci-reference-app/blob/master/server/render.js#L29-L37
 That token gets passed to the `pug` file that renders the HTML file: https://github.com/jonathanong/ci-reference-app/blob/master/server/index.pug#L10
+Rollbar error handling is handled here: https://github.com/jonathanong/ci-reference-app/blob/master/client/on-error.js#L6
 
 To test it, run `Rollbar.error(new Error('boom'))` in your browser console.
 
