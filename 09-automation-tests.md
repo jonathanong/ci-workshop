@@ -40,6 +40,8 @@ Let's write an E2E test that:
 1. Submits the text
 1. Expects a row to appear in the table
 
+This test has been scaffolded for you: https://github.com/jonathanong/ci-reference-app/blob/master/tests/automation/home.js
+
 ## Advanced
 
 [@dollarshaveclub/e2e](https://github.com/dollarshaveclub/e2e) is a complex tool

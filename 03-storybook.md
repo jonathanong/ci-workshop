@@ -160,6 +160,12 @@ workflows:
                 - master
 ```
 
+To get this working correctly, you'll need to give CircleCI some SSH keys.
+Go to your repository's settings, click "Checkout SSH Keys", then
+checkout your SSH keys for the repository:
+
+![](images/checkout-ssh-keys.png)
+
 Push and let's see what happens!
 
 ## Advanced

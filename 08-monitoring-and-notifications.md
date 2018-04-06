@@ -13,7 +13,7 @@ and run it as a CRON job in a [CircleCI Scheduled Workflow](https://circleci.com
 
 ## Environment Variables
 
-Notice in `tests/config/index.js`, we have a `DOMAIN` env var.
+Notice in `tests/config/index.js`, we have a `CI_REFERENCE_APP_DOMAIN` env var.
 This allows us to pass the domain as an env var so we can run the monitor
 against any host we want. By default, it runs against `localhost`,
 but you may want to switch it to production in the future.
@@ -25,22 +25,20 @@ and add the script to `package.json`:
 "monitors": "dsc-monitor 'tests/monitors/**/*.js'"
 ```
 
-## API Monitor
+<!-- ## API Monitor
 
 Let's add a simple API monitor that checks that the `POST /api/v1/shas`
 endpoint works. I would use the `request` module for this.
 If the request failed, an error should be thrown.
 
-You can run this monitor just by running `npx dsc-monitor tests/monitors/api.js`.
+You can run this monitor just by running `npx dsc-monitor tests/monitors/api.js`. -->
 
 ## Browser Monitor
 
 Let's do a simple browser monitor that asserts that the input field and the submit button exists.
 We'll use [`puppeteer`](https://github.com/GoogleChrome/puppeteer) for this.
 
-You can run this monitor just by running `npx dsc-monitor tests/monitors/browser.js`.
-
-## Slack Notifications
+This monitor has been scaffolded for you: https://github.com/jonathanong/ci-reference-app/blob/master/tests/monitors/home.js
 
 ## Running Monitors as Test
 
@@ -68,7 +66,7 @@ Then, let's run our monitors against this server:
 - run: npm run monitors
 ```
 
-Remember, it's hitting our server because the default `DOMAIN` is localhost!
+Remember, it's hitting our server because the default `CI_REFERENCE_APP_DOMAIN` is localhost!
 Let's push a commit and see what happens.
 
 Okay, you probably got an error about some browser dependencies.
@@ -116,6 +114,17 @@ monitor:
 ```
 
 Let's push and see what happens!
+
+## Slack Notifications
+
+When a monitor fails, you'll want to be notified!
+Let's setup Slack notifications to do this.
+Notice that I've already setup one for you: https://github.com/jonathanong/ci-reference-app/blob/master/tests/monitor-plugin.js
+
+To hook it up to the monitors, simply add `-- --plugin tests/monitor-plugin.js` to the end of your `monitor-production` and `monitor-staging` commands.
+After all, that's the only time you want a faile monitor to notify you.
+
+The slack hook goes to the #spam channel in Slack!
 
 ## Advanced
 

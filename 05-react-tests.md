@@ -8,6 +8,8 @@ First, we'll do a snapshot test,
 although Storyshots already handles this.
 You should be able to follow [Jest's documentation](https://facebook.github.io/jest/docs/en/snapshot-testing.html).
 
+The test is scaffolded here: https://github.com/jonathanong/ci-reference-app/blob/master/client/components/SubmitShaForm/__tests__/view.js
+
 ## Redux Action Dispatcher Test
 
 Our redux store is very simple.
@@ -24,8 +26,11 @@ It has a structure like so:
 }
 ```
 
+However, we want to do a unit test on an action dispatcher and the `shas` reducer (not the entire store).
 Let's call the `getSha()` action dispatcher and assert that the
 latest input is appended to the redux store.
+
+The test is scaffolded here: https://github.com/jonathanong/ci-reference-app/blob/master/client/store/shas/__tests__/index.js
 
 Notice that this action dispatcher uses an API call,
 but we don't have an API setup for this test.
