@@ -8,7 +8,7 @@ First, we'll do a snapshot test,
 although Storyshots already handles this.
 You should be able to follow [Jest's documentation](https://facebook.github.io/jest/docs/en/snapshot-testing.html).
 
-The test is scaffolded here: [client/components/SubmitShaForm/__tests__/view.js](https://github.com/jonathanong/ci-reference-app/blob/master/client/components/SubmitShaForm/__tests__/view.js)
+The test is scaffolded here: [client/components/SubmitShaForm/\__tests\__/view.js](https://github.com/jonathanong/ci-reference-app/blob/master/client/components/SubmitShaForm/\__tests\__/view.js)
 
 ## Redux Action Dispatcher Test
 
