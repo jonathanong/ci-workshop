@@ -68,8 +68,13 @@ and exposes a `assignFeatureFlag()` function toggle features.
 Note that assigning a feature flag will require a browser refresh in this
 implementation as we haven't hooked it up to our Redux store.
 
-Next, in [client/components/SubmitShaForm/View.js](https://github.com/jonathanong/ci-reference-app/blob/master/client/components/SubmitShaForm/View.js), let's `import { featureFlags } from '../../feature-flags'` and toggle a red table when
-`featureFlags.redTable` is true:
+Next, in [client/components/SubmitShaForm/View.js](https://github.com/jonathanong/ci-reference-app/blob/master/client/components/SubmitShaForm/View.js), let's import the feature flags:
+
+```js
+import { featureFlags } from '../../feature-flags'
+```
+
+And toggle a red table when `featureFlags.redTable` is true:
 
 ```js
 <form className={featureFlags.redTable ? 'red-table' : ''} onSubmit={this.onSubmit}>
