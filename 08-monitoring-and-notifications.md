@@ -80,18 +80,20 @@ First, we need to make the monitor jobs:
 
 ```yaml
 monitor-production:
-    <<: *browser-defaults
+    docker:
+      - image: circleci/node:8-browsers
     steps:
       - checkout
       - run: npm install # TODO: restore from cache
-      - run: DOMAIN=https://<your-app>.herokuapp.com npm run monitors
+      - run: CI_REFERENCE_APP_DOMAIN=https://<your-app>.herokuapp.com npm run monitors
 
 monitor-staging:
-    <<: *browser-defaults
+    docker:
+      - image: circleci/node:8-browsers
     steps:
       - checkout
       - run: npm install # TODO: restore from cache
-      - run: DOMAIN=https://<your-staging-app>.herokuapp.com npm run monitors
+      - run: CI_REFERENCE_APP_DOMAIN=https://<your-staging-app>.herokuapp.com npm run monitors
 ```
 
 Now, let's create the CRON workflow that runs these jobs:
