@@ -38,7 +38,7 @@ You can run this monitor just by running `npx dsc-monitor tests/monitors/api.js`
 Let's do a simple browser monitor that asserts that the input field and the submit button exists.
 We'll use [`puppeteer`](https://github.com/GoogleChrome/puppeteer) for this.
 
-This monitor has been scaffolded for you: https://github.com/jonathanong/ci-reference-app/blob/master/tests/monitors/home.js
+This monitor has been scaffolded for you: [tests/monitors/home.js](https://github.com/jonathanong/ci-reference-app/blob/master/tests/monitors/home.js)
 
 ## Running Monitors as Test
 
@@ -119,7 +119,7 @@ Let's push and see what happens!
 
 When a monitor fails, you'll want to be notified!
 Let's setup Slack notifications to do this.
-Notice that I've already setup one for you: https://github.com/jonathanong/ci-reference-app/blob/master/tests/monitor-plugin.js
+Notice that I've already setup one for you: [tests/monitor-plugin.js](https://github.com/jonathanong/ci-reference-app/blob/master/tests/monitor-plugin.js)
 
 To hook it up to the monitors, simply add `-- --plugin tests/monitor-plugin.js` to the end of your `monitor-production` and `monitor-staging` commands.
 After all, that's the only time you want a faile monitor to notify you.

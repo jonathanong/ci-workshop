@@ -171,5 +171,5 @@ Push and let's see what happens!
 ## Advanced
 
 - Notice that tests are ran when the storybook is pushed to `gh-pages`, but there are no tests! How can we avoid that from happening?
-- Look into implementing addons: https://storybook.js.org/addons/addon-gallery/
-- Look into continuous visual regression testing: https://percy.io/
+- Look into implementing addons: [https://storybook.js.org/addons/addon-gallery/](https://storybook.js.org/addons/addon-gallery/)
+- Look into continuous visual regression testing: [https://percy.io/](https://percy.io/)

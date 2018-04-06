@@ -26,7 +26,7 @@ This CircleCI build does the following:
 1. Check out the git code
 1. `npm install`
 
-Read more about caching here: https://circleci.com/docs/2.0/caching/
+Read more about caching here: [https://circleci.com/docs/2.0/caching/](https://circleci.com/docs/2.0/caching/)
 
 Let's add our lint commands after `npm install`:
 
