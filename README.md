@@ -132,6 +132,29 @@ The main tenets of the testing trophy is:
   - Unit tests are tests for engineers. End-to-End tests are tests for stakeholders. It's more important to write tests for stakeholders as that's how your work is measured.
 - If your tests become too slow, parallelize and shard your tests!
 
+Here is how our custom setup for monitors and automation differ for us at Dollar Shave Club:
+
+|               | Unit / Integration | face-monitor | face-e2e |
+| ------------- | ------------------ |------------- | -------- |
+| Speed | Fast | Moderate | Slow |
+| Runs in production | No |Yes | Not Yet |
+| Runs in staging | No | Yes | Not Yet |
+| Runs in review apps | No |Yes | Yes |
+| Supports Selenium | No | No | Yes |
+| Supports Puppeteer | No | Yes | Yes |
+| Supports testing all browsers | No | No | Yes |
+| Supports Sauce Labs | No | No | Yes |
+| Supports retries | Maybe | Yes | Yes |
+| Supports retries on Sauce Labs | No | No | Yes |
+| Supports BDD | Yes | No | Yes |
+| Flakiness (1-5) | 2 | 3 | 4 |
+| Hooked up to Datadog and/or alerts | No | Yes | No |
+| Ability to disable analytics | Yes | Yes | No |
+| Google Timeline Viewer | No | Yes | No |
+| Browser Screenshots | [Percy Storybook](https://percy.io/) | Implemented | Not Implemented |
+
+`face-` are our suites of monitors and e2e tests with a lot of customization involved.
+
 ## Tools
 
 Backend:

@@ -62,3 +62,9 @@ In this workshop, your CircleCI jobs will be slow because we haven't setup cachi
 which could be its own lesson.
 
 For a more complex CircleCI config file, checkout [IMS's](https://github.com/jonathanong/ims/blob/master/.circleci/config.yml).
+
+Here is our CircleCI Workflow at DSC:
+
+![](images/dsc-circleci-workflow.png)
+
+`dqa` is our version of Heroku's review apps.
