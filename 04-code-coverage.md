@@ -31,7 +31,7 @@ then add `npx codecov` after your test command:
 
 After your first run, you should be able to go to your repository's
 Codecov page and see the coverage.
-To go directly, go to [https://codecov.io/gh/<github-handle>/<repo-name>](https://codecov.io/gh/<github-handle>/<repo-name>).
+To go directly, go to [https://codecov.io/gh/\<github-handle\>/\<repo-name\>](https://codecov.io/gh/\<github-handle\>/\<repo-name\>).
 
 ## Codecov Badge
 
