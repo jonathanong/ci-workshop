@@ -76,7 +76,14 @@ Read more here: [https://devcenter.heroku.com/articles/github-integration-review
 ![](./images/heroku/07-enable-review-apps-form.png)
 
 Now, let's push a commit to master and see what happens!
-Let's also make a new PR and see what happens?
+Let's also make a new PR and see what happens!
+
+Be sure to set env vars for each app!
+
+- Production should have `NODE_ENV=production`
+- Staging should have `NODE_ENV=staging`
+
+![](images/heroku/heroku-env-vars.png)
 
 ## Advanced
 
