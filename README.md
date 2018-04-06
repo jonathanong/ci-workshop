@@ -49,7 +49,7 @@ Contact me:
 
 ## Reference App
 
-The reference app you will be working on and deploying is here: https://github.com/jonathanong/ci-reference-app.
+The reference app you will be working on and deploying is here: __[jonathanong/ci-reference-app](https://github.com/jonathanong/ci-reference-app)__.
 This app is based on my personal reference app [IMS](https://github.com/jonathanong/ims),
 so feel free to explore it.
 If you wish to cheat, there are solutions in the [solution](https://github.com/jonathanong/ci-reference-app/tree/solution) branch.
