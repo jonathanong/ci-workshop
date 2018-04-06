@@ -34,7 +34,7 @@ just like real web development ;)
 11. [Dependency Upgrades and Security Checks](11-dependency-upgrades-and-security-checks.md)
 12. [GitHub Status Checks](12-github-status-checks.md)
 13. [Dark Launching with Feature Flags](13-dark-launching-with-feature-flags.md)
-<!-- 1. [Learn More](learn-more.md) -->
+1. [Learn More](learn-more.md)
 
 Please read the background below before starting on the lessons.
 
