@@ -44,3 +44,4 @@ then copy the markdown snippet to your readme. Done!
 - Private repositories are a little harder. When you go to your repository page,
   you'll be given a copy token. Add this to your CircleCI job as a `CODECOV_TOKEN`
   environment variable, then you'll be squared away.
+- You may want to require all PRs to have sufficient code coverage and enforce this with a GitHub Required Status Check. This can be done with a [Codecov yaml](https://docs.codecov.io/v5.0.0/docs/codecov-yaml).
