@@ -30,7 +30,7 @@ However, we want to do a unit test on an action dispatcher and the `shas` reduce
 Let's call the `getSha()` action dispatcher and assert that the
 latest input is appended to the redux store.
 
-The test is scaffolded here: [client/store/shas/\__tests\__/index.js](https://github.com/jonathanong/ci-reference-app/blob/master/client/store/shas/\__tests\__/index.js)
+The test is scaffolded here: [client/store/shas/\__tests\__/index.js](https://github.com/jonathanong/ci-reference-app/blob/master/client/store/shas/__tests__/index.js)
 
 Notice that this action dispatcher uses an API call,
 but we don't have an API setup for this test.

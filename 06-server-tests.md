@@ -40,7 +40,7 @@ Our first method, `getSha`, takes a string and returns a commit sha in hex.
 Let's test that the commit sha returned from any valid input returns a valid hex.
 You could use `require('assert')` or Jest's built-in [expect](https://facebook.github.io/jest/docs/en/expect.html).
 
-The test is scaffolded here: [server/\__tests\__/shas.js](https://github.com/jonathanong/ci-reference-app/blob/master/server/\__tests\__/shas.js)
+The test is scaffolded here: [server/\__tests\__/shas.js](https://github.com/jonathanong/ci-reference-app/blob/master/server/__tests__/shas.js)
 
 We should also be thinking about all the test cases.
 What happens if someone passes something that isn't a string to `getSha()`?
@@ -54,7 +54,7 @@ built on top of [superagent](http://visionmedia.github.io/superagent/) that
 makes testing simple API endpoints dead simple.
 Let's implement it for our `POST /api/v1/shas` route.
 
-The test is scaffolded here: [server/\__tests\__/api.js](https://github.com/jonathanong/ci-reference-app/blob/master/server/\__tests\__/api.js)
+The test is scaffolded here: [server/\__tests\__/api.js](https://github.com/jonathanong/ci-reference-app/blob/master/server/__tests__/api.js)
 
 ## Running in CircleCI
 
