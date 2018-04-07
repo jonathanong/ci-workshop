@@ -47,9 +47,6 @@ Next, let's setup the CircleCI Badge on your readme:
 
 1. Go to "builds" on the left
 1. Click the gear icon on your project
-1. Click "API Permissions"
-1. Click "Create Token"
-1. Create a token for "Status" - call it something like "Readme Badge"
 1. Go to "Status Badges" on the left
 1. Select the "master" branch
 1. Copy and paste the Markdown embed code into your readme!
