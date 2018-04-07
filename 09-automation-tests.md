@@ -40,7 +40,9 @@ Let's write an E2E test that:
 1. Submits the text
 1. Expects a row to appear in the table
 
-This test has been scaffolded for you: [tests/automation/home.js](https://github.com/jonathanong/ci-reference-app/blob/master/tests/automation/home.js)
+This test has been scaffolded for you: [tests/automation/home.js](https://github.com/jonathanong/ci-reference-app/blob/master/tests/automation/home.js).
+`driver` references a [Selenium WebDriver instance](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/),
+whereas everything else in the file is based on our test runner, [@dollarshaveclub/e2e](https://github.com/dollarshaveclub/e2e).
 
 ## Advanced
 
@@ -58,7 +60,6 @@ using services like:
 
 - [Sauce Labs](https://saucelabs.com/)
 - [Browser Stack](https://www.browserstack.com/)
-
 
 Remember, E2E tests are at the top of the testing trophy.
 Very few should be written!
