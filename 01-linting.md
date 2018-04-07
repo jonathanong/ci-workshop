@@ -91,6 +91,14 @@ env:
 This is the correct method, but it's also tedious.
 We could also just add this to our root `.eslintrc` file.
 
+You may also get errors like `'fetch' is not defined`. The reason is that we did
+not specify the `client/`'s environment as a browser! Create this `client/.eslintrc` file:
+
+```yaml
+env:
+  browser: true
+```
+
 Now notice that when you run `npm run eslint`,
 there are `semicolon` errors as `standard` does not like semicolons.
 Instead of manually fixing these errors, just run `npm run eslint -- --fix`.
