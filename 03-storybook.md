@@ -81,6 +81,22 @@ Now, let's run it!
 npm run test:jsdom
 ```
 
+You may see failing tests. We'll fix them later, so skip them for now by
+"skipping" them in one of two ways:
+
+```js
+xtest('whatever test', () => {})
+```
+
+Or:
+
+```js
+test.skip('whatever test', () => {})
+```
+
+Scaffolding your tests as skipped steps is a great way to follow BDD and
+understand your problem before even starting to write code!
+
 And, let's add it to our CircleCI config:
 
 ```yaml
