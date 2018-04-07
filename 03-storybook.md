@@ -133,7 +133,7 @@ jobs:
     # ...intentional omission...
 ```
 
-After restoring cache, `publish-storybook` should just publish the storybook:
+`publish-storybook` should just publish the storybook (copy the test job, but use these `steps` instead):
 
 ```yaml
 - checkout
