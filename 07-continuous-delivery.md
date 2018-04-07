@@ -39,6 +39,17 @@ The second is an [`app.json`](https://devcenter.heroku.com/articles/app-json-sch
 }
 ```
 
+Finally, we'll need to setup a build command for Heroku.
+By default, Heroku just runs `npm install` on your app,
+but we need to run our webpack builds.
+Add the following to your `package.json`'s `scripts`:
+
+```
+"heroku-postbuild": "npm run build && npm run build-storybook"
+```
+
+[`heroku-postbuild`](https://devcenter.heroku.com/articles/nodejs-support#heroku-specific-build-steps) is executed after `npm install`, building your frontend app.
+
 ## Setting It UP
 
 Let's create a new pipeline. Call it whatever you want:
