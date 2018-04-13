@@ -1,4 +1,0 @@
-
-# Security Checks
-
-## Node Security
